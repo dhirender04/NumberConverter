@@ -10,9 +10,10 @@
         android:id="@+id/enterNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="140dp"
         android:hint="Enter the number"
         android:inputType="number"
+        android:textSize="34sp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,10 +21,11 @@
 
     <Button
         android:id="@+id/btnConvert"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="Convert"
+        android:text="@string/convert"
+        android:textSize="36sp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -31,8 +33,10 @@
 
     <TextView
         android:id="@+id/txtView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="36sp"
+        style="@style/TextAppearance.AppCompat.Headline"
         android:hint="Converting Numbers To Words"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
