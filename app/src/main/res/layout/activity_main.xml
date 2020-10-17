@@ -4,15 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/enterNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="76dp"
+        android:background="#F7F8FA"
         android:hint="Enter the number"
         android:inputType="number"
+        android:padding="16dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
         android:textSize="34sp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,7 +30,9 @@
         android:id="@+id/btnConvert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
+        android:background="#F7F8FA"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="@string/convert"
         android:textSize="36sp"
         app:layout_constraintHorizontal_bias="0.498"
@@ -33,17 +42,24 @@
 
     <TextView
         android:id="@+id/txtView"
+        style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp"
-        style="@style/TextAppearance.AppCompat.Headline"
+        android:background="#F7F8FA"
         android:hint="Converting Numbers To Words"
+        android:padding="16dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConvert"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.053" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
