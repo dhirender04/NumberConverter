@@ -35,22 +35,13 @@ public class MainActivity extends AppCompatActivity {
     convert.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            try {
+          try {
                 int n1 = Integer.parseInt(String.valueOf(enterNumber.getText()));
                 String word = convertNumber(n1);
                 txtView.setText(word);
             }catch (Exception e){
-                AlertDialog alertDialog=new AlertDialog.Builder(MainActivity.this).create();
-                alertDialog.setTitle("Unacceptable Numbers Enter");
-                alertDialog.setMessage("ENTER NUMBER IS GREATER THEN CRORE");
-                alertDialog.setButton(alertDialog.BUTTON_NEUTRAL,"Ok" ,new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                    }
-                });
-                alertDialog.show();
-
+               alertMessage();
+               
             }
 
 
@@ -93,14 +84,32 @@ public class MainActivity extends AppCompatActivity {
         }else  if(num>=100000 && num<10000000){
             str1=fun(num/100000)+" Lakh "+convertNumber(num%100000);
         }
-        else if (num>10000000 && num<1000000000){
-            str1=fun(num/10000000)+ " Crore " +convertNumber(num%10000000);
+        else if(num>=10000000 && num<1000000000) {
+            str1 = fun(num / 10000000) + " Crore " + convertNumber(num % 10000000);
+
+        }else{
+            alertMessage();
+
         }
 
 
 
         return str1;
 
+
+    }
+
+    public void alertMessage(){
+        AlertDialog alertDialog=new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle("Unacceptable Numbers Enter");
+        alertDialog.setMessage("ENTER NUMBER IS GREATER THEN CRORE");
+        alertDialog.setButton(alertDialog.BUTTON_NEUTRAL,"Ok" ,new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
 
     }
 }
